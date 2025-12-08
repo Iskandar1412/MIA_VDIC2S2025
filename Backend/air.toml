@@ -1,0 +1,3 @@
+[build]
+cmd = "go run server.go"
+bin = "tmp/main"

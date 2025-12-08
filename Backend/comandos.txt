@@ -1,0 +1,14 @@
+Creación raíz 
+
+// Servirá para crear un inicio o raíz de la cual se podrá modularizar todo el proyecto
+--> go mod init <Nombre raiz>
+
+// Instalación de paquetes
+--> go mod tidy
+
+// Instalación de paquetes
+--> Go get <paquete>
+
+go install github.com/air-verse/air@latest
+go get github.com/rs/cors
+go get github.com/fatih/color
