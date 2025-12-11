@@ -13,7 +13,7 @@ var NamePath = "VDIC-MIA"
 var ReportPath = "VDIC-MIA/Rep"
 var DiskPath = "VDIC-MIA/Disks"
 
-func ObtenerComandos(x string) []string {
+func ObtenerParametros(x string) []string {
 	var comandos []string
 	atributos := regexp.MustCompile(`(-|>)(\w+)(?:="([^"]+)"|=(-?/?(\w+)?(?:/?[\w.-]+)*))?`).FindAllStringSubmatch(x, -1)
 	for _, matches := range atributos {
