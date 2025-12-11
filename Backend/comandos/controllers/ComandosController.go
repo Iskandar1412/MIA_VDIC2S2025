@@ -3,6 +3,7 @@ package controllers
 import (
 	"Proyecto/comandos/general"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"strings"
 )
@@ -72,9 +73,8 @@ func HandleCommand(w http.ResponseWriter, r *http.Request) {
 		// return
 	}
 
-	for _, temp := range salida.LstComandos {
-		println(temp)
-	}
+	errores, contadorErrorres := general.GlobalCom(salida.LstComandos)
+	fmt.Println(errores, contadorErrorres)
 
 	// comandos.GlobalCom(ejecutar)
 	// obtencionpf.ObtenerMBR_Mounted()
