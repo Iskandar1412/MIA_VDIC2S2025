@@ -3,6 +3,7 @@ package main
 import (
 	"Proyecto/comandos/controllers"
 	"Proyecto/comandos/general"
+	"Proyecto/middlewares"
 	"fmt"
 	"net/http"
 
@@ -24,7 +25,9 @@ func main() {
 	// mux.HandleFunc("/graphs", handleGraph)
 	// mux.HandleFunc("/obtain-carpetas-archivos", handleObtainCarpetasArchivos)
 	// mux.HandleFunc("/cat", handleCat) //-------Nuevo
-	handler := c.Handler(mux)
+
+	// handler := c.Handler(mux)
+	handler := middlewares.RecoverMiddleware(c.Handler(mux))
 
 	fmt.Println("" + fmt.Sprintf("Backend server is on %v", puerto))
 	general.CrearCarpeta()

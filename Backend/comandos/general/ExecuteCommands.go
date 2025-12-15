@@ -1,6 +1,7 @@
 package general
 
 import (
+	"Proyecto/comandos/commandGroups/disk"
 	"strings"
 
 	"github.com/fatih/color"
@@ -40,6 +41,7 @@ func GlobalCom(lista []string) ([]string, int) {
 			color.Red("Comando no reconocido %v", command)
 			errores = append(errores, strError)
 			contErrores++
+			continue
 		}
 
 		comandos := ObtenerParametros(comm)
@@ -48,6 +50,7 @@ func GlobalCom(lista []string) ([]string, int) {
 		switch group {
 		case "disk":
 			color.Cyan("Administración de discos: %v", command)
+			disk.DiskExecuteCommanWithProps(command, comandos)
 
 		case "reports":
 			color.Red("Administración de reportes: %v", command)

@@ -31,15 +31,15 @@ func ObtenerParametros(x string) []string {
 	return comandos
 }
 
-func getCommand(comm string, commands ...string) string {
-	comm = strings.ToLower(comm)
-	for _, c := range commands {
-		if strings.HasPrefix(comm, c) {
-			return c
-		}
-	}
-	return ""
-}
+// func getCommand(comm string, commands ...string) string {
+// 	comm = strings.ToLower(comm)
+// 	for _, c := range commands {
+// 		if strings.HasPrefix(comm, c) {
+// 			return c
+// 		}
+// 	}
+// 	return ""
+// }
 
 func CrearCarpeta() {
 	// nombre := "VDIC-MIA"
