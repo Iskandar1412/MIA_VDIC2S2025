@@ -54,6 +54,7 @@ func GlobalCom(lista []string) ([]string, int) {
 
 		case "reports":
 			color.Red("Administración de reportes: %v", command)
+			// disk.DiskExecuteCommanWithProps(command, comandos)
 
 		case "files":
 			color.Green("Administración de Archivos: %v", command)

@@ -66,6 +66,7 @@ func createDiskFile(archivo string, tamanio int32, fit byte, unidad byte) (bool,
 	defer file.Close()
 
 	var estructura structures.MBR
+
 	tamanioDiscco := utils.ObtenerTamanioDisco(tamanio, unidad)
 	estructura.Mbr_tamano = tamanioDiscco
 	estructura.Mbr_fecha_creacion = utils.ObFechaInt()
